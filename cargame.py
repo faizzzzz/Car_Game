@@ -257,14 +257,14 @@ def gameLevels():
     if car.score > 0:
         obs_1.loop(car)
         car.score_add = 1
-    if car.score > 50:  # the second level starts after the player crosses 25 points
+    if car.score > 50:  # the second level starts after the player crosses 50 points
         obs_2.loop(car)
-        car.score_add = 2   #2 points are add in level 2
+        car.score_add = 2   # 2 points are add in level 2
     if car.score > 200:
         obs_3.obsMinspeed = 15  #the minimum speed of the third obstacle is inceased so that moves fast
         obs_3.loop(car)
         obs_3.bonusScore = 15
-        car.score_add = 5       #5 points are add after level 5
+        car.score_add = 5       #5 points are added after level 5
 
 schedule.every(0.5).seconds.do(scoreUP)     #adds points after every 0.5 seconds
 
